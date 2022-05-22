@@ -18,6 +18,11 @@
 		D0C0E3422827D83500795CD0 /* SimpleKeyboardAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3412827D83500795CD0 /* SimpleKeyboardAppUITestsLaunchTests.swift */; };
 		D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */; };
 		D0C0E3592827D87F00795CD0 /* SimpleKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0C0E3602828CE2600795CD0 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0C0E35F2828CE2600795CD0 /* KeyboardKit */; };
+		D0C0E3632828CE8700795CD0 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0C0E3622828CE8700795CD0 /* KeyboardKit */; };
+		D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */; };
+		D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B0283A571C000C1D69 /* KeyboardView.swift */; };
+		D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,9 @@
 		D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D0C0E3562827D87F00795CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonInputSetProvider.swift; sourceTree = "<group>"; };
+		D0D054B0283A571C000C1D69 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonAutocompleteToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C0E3602828CE2600795CD0 /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C0E3632828CE8700795CD0 /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +127,7 @@
 				D0C0E33E2827D83500795CD0 /* SimpleKeyboardAppUITests */,
 				D0C0E3532827D87F00795CD0 /* SimpleKeyboard */,
 				D0C0E31C2827D82F00795CD0 /* Products */,
+				D0C0E3612828CE8700795CD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,10 +176,20 @@
 		D0C0E3532827D87F00795CD0 /* SimpleKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */,
+				D0D054B0283A571C000C1D69 /* KeyboardView.swift */,
+				D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */,
 				D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */,
 				D0C0E3562827D87F00795CD0 /* Info.plist */,
 			);
 			path = SimpleKeyboard;
+			sourceTree = "<group>";
+		};
+		D0C0E3612828CE8700795CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +210,9 @@
 				D0C0E3582827D87F00795CD0 /* PBXTargetDependency */,
 			);
 			name = SimpleKeyboardApp;
+			packageProductDependencies = (
+				D0C0E35F2828CE2600795CD0 /* KeyboardKit */,
+			);
 			productName = SimpleKeyboardApp;
 			productReference = D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +266,9 @@
 			dependencies = (
 			);
 			name = SimpleKeyboard;
+			packageProductDependencies = (
+				D0C0E3622828CE8700795CD0 /* KeyboardKit */,
+			);
 			productName = SimpleKeyboard;
 			productReference = D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -281,6 +308,9 @@
 				Base,
 			);
 			mainGroup = D0C0E3122827D82F00795CD0;
+			packageReferences = (
+				D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			productRefGroup = D0C0E31C2827D82F00795CD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,6 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */,
+				D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */,
+				D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */,
 				D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,6 +805,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GlockTian/KeyboardKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0C0E35F2828CE2600795CD0 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+		D0C0E3622828CE8700795CD0 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0C0E3132827D82F00795CD0 /* Project object */;
 }

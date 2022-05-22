@@ -1,60 +1,49 @@
-//
-//  KeyboardViewController.swift
-//  SimpleKeyboard
-//
-//  Created by Peter on 8/05/22.
-//
+import KeyboardKit
+import SwiftUI
 
-import UIKit
-
-class KeyboardViewController: UIInputViewController {
-
-    @IBOutlet var nextKeyboardButton: UIButton!
+/**
+ This keyboard demonstrates how to create a keyboard that is
+ using `SystemKeyboard` to mimic a native iOS keyboard.
+ 
+ The demo makes demo-specific configurations in `viewDidLoad`
+ and registers a custom view in `viewWillSetupKeyboard`.
+ 
+ To use this keyboard, you must enable it in system settings
+ ("Settings/General/Keyboards"). It needs full access to get
+ access to features like haptic and audio feedback.
+ 
+ Note that this demo adds KeyboardKit as a local package and
+ not a remote package, as you would normally do. It makes it
+ possible to change things in the library directly from this
+ project instead of having to push changes to GitHub.
+ */
+class KeyboardViewController: KeyboardInputViewController {
     
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        // Add custom view sizing constraints here
-    }
-    
+    /**
+     In this demo, we will only configure KeyboardKit to use
+     a demo-specific, unicode-based input set provider.
+     */
     override func viewDidLoad() {
+        
+        // Inject a demo-specific unicode input set provider
+        // 💡 Play with this to change the keyboard's layout
+        inputSetProvider = DemoInputSetProvider()
+        
+        // Call super to perform the base initialization
         super.viewDidLoad()
-        
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton(type: .system)
-        
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
-    override func viewWillLayoutSubviews() {
-        self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-        super.viewWillLayoutSubviews()
-    }
-    
-    override func textWillChange(_ textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-    
-    override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
+    /**
+     This function is called whenever the keyboard should be
+     created or updated.
+     
+     Here, we call setup with a demo-specific view that uses
+     ``SystemKeyboard`` to mimic a native iOS keyboard.
+     */
+    override func viewWillSetupKeyboard() {
+        super.viewWillSetupKeyboard()
         
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
-        } else {
-            textColor = UIColor.black
-        }
-        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+        // Setup a demo-specific keyboard view
+        setup(with: KeyboardView())
     }
-
 }
