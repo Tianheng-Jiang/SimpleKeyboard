@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */; };
+		659F254F5C30F8B8B8564E43 /* DemoKeyboardLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */; };
+		659F284B89FD3066D9382EAA /* DemoKeyboardActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */; };
+		659F2A240A362C5392B7F8EE /* DemoKeyboardAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */; };
 		D0C0E31F2827D82F00795CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */; };
 		D0C0E3212827D82F00795CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */; };
 		D0C0E3232827D82F00795CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3222827D82F00795CD0 /* ViewController.swift */; };
@@ -64,6 +68,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAutocompleteProvider.swift; sourceTree = "<group>"; };
+		659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardAppearance.swift; sourceTree = "<group>"; };
+		659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardLayoutProvider.swift; sourceTree = "<group>"; };
+		659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardActionHandler.swift; sourceTree = "<group>"; };
 		D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleKeyboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +189,10 @@
 				D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */,
 				D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */,
 				D0C0E3562827D87F00795CD0 /* Info.plist */,
+				659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */,
+				659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */,
+				659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */,
+				659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */,
 			);
 			path = SimpleKeyboard;
 			sourceTree = "<group>";
@@ -393,6 +405,10 @@
 				D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */,
 				D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */,
 				D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */,
+				659F284B89FD3066D9382EAA /* DemoKeyboardActionHandler.swift in Sources */,
+				659F2A240A362C5392B7F8EE /* DemoKeyboardAppearance.swift in Sources */,
+				659F254F5C30F8B8B8564E43 /* DemoKeyboardLayoutProvider.swift in Sources */,
+				659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

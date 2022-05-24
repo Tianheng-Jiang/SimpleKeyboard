@@ -25,10 +25,26 @@ class KeyboardViewController: KeyboardInputViewController {
      */
     override func viewDidLoad() {
         
-        // Inject a demo-specific unicode input set provider
+//        // Inject a demo-specific unicode input set provider
+//        // 💡 Play with this to change the keyboard's layout
+//        inputSetProvider = DemoInputSetProvider()
+
+
+        autocompleteProvider = FakeAutocompleteProvider()
+        // Setup a demo-specific keyboard appearance
+        // 💡 Play with this to change style of the keyboard
+        keyboardAppearance = DemoKeyboardAppearance(context: keyboardContext)
+
+        // Setup a demo-specific keyboard action handler
+        // 💡 Play with this to change the keyboard behavior
+        keyboardActionHandler = DemoKeyboardActionHandler(
+                inputViewController: self)
+
+        // Setup a demo-specific keyboard layout provider
         // 💡 Play with this to change the keyboard's layout
-        inputSetProvider = DemoInputSetProvider()
-        
+        keyboardLayoutProvider = DemoKeyboardLayoutProvider(
+                inputSetProvider: inputSetProvider,
+                dictationReplacement: nil)
         // Call super to perform the base initialization
         super.viewDidLoad()
     }

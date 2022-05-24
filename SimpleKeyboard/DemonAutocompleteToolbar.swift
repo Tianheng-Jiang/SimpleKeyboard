@@ -17,12 +17,21 @@ struct DemoAutocompleteToolbar: View {
     
     @EnvironmentObject private var context: AutocompleteContext
     @EnvironmentObject private var keyboardContext: KeyboardContext
-    
+
+
+    @State private var show = false
+
     var body: some View {
-        AutocompleteToolbar(
-            suggestions: context.suggestions,
-            locale: keyboardContext.locale)
-            .frame(height: 50)
+            if show {
+                AutocompleteToolbar(
+                        suggestions: Array(context.suggestions[0..<3]),
+                        locale: keyboardContext.locale)
+                        .frame(height: 50)
+            }
+
+            Toggle("ShowMore", isOn: $show)
+                    .toggleStyle(.button)
+                    .tint(.mint)
     }
 }
 
@@ -32,10 +41,10 @@ private extension DemoAutocompleteToolbar {
         UIDevice.current.userInterfaceIdiom == .pad
     }
 }
-//
-//struct DemoAutocompleteToolbar_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        DemoAutocompleteToolbar()
-//    }
-//}
+
+struct DemoAutocompleteToolbar_Previews: PreviewProvider {
+
+    static var previews: some View {
+        DemoAutocompleteToolbar()
+    }
+}
