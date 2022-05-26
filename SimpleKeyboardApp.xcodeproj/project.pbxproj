@@ -27,6 +27,7 @@
 		D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */; };
 		D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B0283A571C000C1D69 /* KeyboardView.swift */; };
 		D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */; };
+		D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonInputSetProvider.swift; sourceTree = "<group>"; };
 		D0D054B0283A571C000C1D69 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonAutocompleteToolbar.swift; sourceTree = "<group>"; };
+		D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteKeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */,
 				659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */,
 				659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */,
+				D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */,
 			);
 			path = SimpleKeyboard;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				659F2A240A362C5392B7F8EE /* DemoKeyboardAppearance.swift in Sources */,
 				659F254F5C30F8B8B8564E43 /* DemoKeyboardLayoutProvider.swift in Sources */,
 				659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */,
+				D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

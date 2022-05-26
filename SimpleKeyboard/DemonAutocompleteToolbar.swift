@@ -15,23 +15,22 @@ import SwiftUI
  */
 struct DemoAutocompleteToolbar: View {
     
+    @Binding public var isSystem :Bool
+
     @EnvironmentObject private var context: AutocompleteContext
     @EnvironmentObject private var keyboardContext: KeyboardContext
-
-
-    @State private var show = false
-
+    
     var body: some View {
-            if show {
-                AutocompleteToolbar(
-                        suggestions: Array(context.suggestions[0..<3]),
-                        locale: keyboardContext.locale)
-                        .frame(height: 50)
-            }
+        if !context.suggestions.isEmpty {
+            AutocompleteToolbar(
+                    suggestions: Array(context.suggestions[0..<3]),
+                    locale: keyboardContext.locale)
+                    .frame(height: 50)
+        }
 
-            Toggle("ShowMore", isOn: $show)
-                    .toggleStyle(.button)
-                    .tint(.mint)
+        Toggle("ShowMore", isOn: $isSystem)
+                .toggleStyle(.button)
+                .tint(.mint)
     }
 }
 
@@ -43,8 +42,8 @@ private extension DemoAutocompleteToolbar {
 }
 
 struct DemoAutocompleteToolbar_Previews: PreviewProvider {
-
+    
     static var previews: some View {
-        DemoAutocompleteToolbar()
+        DemoAutocompleteToolbar(isSystem:.constant(true))
     }
 }

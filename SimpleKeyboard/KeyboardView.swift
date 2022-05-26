@@ -28,16 +28,21 @@ struct KeyboardView: View {
     
     @State private var text = "Text"
     
+    @State public var isSystem = true
     // @ObservedObject private var context: KeyboardContext
     
     @EnvironmentObject private var context: KeyboardContext
     
     var body: some View {
         VStack(spacing: 0) {
-            if context.keyboardType != .emojis {
-                DemoAutocompleteToolbar()
+            if context.keyboardType != .emojis && isSystem {
+                DemoAutocompleteToolbar(isSystem:$isSystem)
             }
-            SystemKeyboard()
+            if isSystem {
+                SystemKeyboard()
+            }else{
+                AutocompleteKeyboardView(isSystem:$isSystem)
+            }
         }
     }
 }
@@ -53,5 +58,12 @@ private extension KeyboardView {
             $0.borderStyle = .roundedRect
             $0.autocapitalizationType = .sentences
         }.padding(3)
+    }
+}
+
+
+struct KeyboardView_Preview: PreviewProvider{
+    static var previews: some View{
+        KeyboardView()
     }
 }

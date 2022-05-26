@@ -40,13 +40,23 @@ private extension FakeAutocompleteProvider {
     
     func suggestions(for text: String) -> [AutocompleteSuggestion] {
         [
-            suggestion(text + "ly"),
-            suggestion(text + "er"),
-            suggestion(text + "er"),
-            suggestion(text + "er"),
-            suggestion(text + "er"),
-            suggestion(text + "er"),
-            suggestion(text + "ter")
+            suggestion(text + "1"),
+            suggestion(text + "2"),
+            suggestion(text + "3"),
+            suggestion(text + "4"),
+            suggestion(text + "5"),
+            suggestion(text + "6"),
+            suggestion(text + "7"),
+            suggestion(text + "8"),
+            suggestion(text + "9"),
+            suggestion(text + "A"),
+            suggestion(text + "B"),
+            suggestion(text + "C"),
+            suggestion(text + "E"),
+            suggestion(text + "F"),
+            suggestion(text + "G"),
+            suggestion(text + "H"),
+            suggestion(text + "I"),
         ]
     }
     
