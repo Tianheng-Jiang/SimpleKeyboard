@@ -24,28 +24,31 @@ struct AutocompleteKeyboardView: View {
     ]
     
     var body: some View {
-        if context.suggestions.isEmpty {
+    
+        VStack{
             Button(action:{
                 isSystem.toggle()
             }){
                 Text("Back").padding()
             }
-        }else{
-            
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(context.suggestions, id: \.title) { item in
-                    Button(action:{
-                        keyboardContext.textDocumentProxy.insertText(item.title+" ")
-                        isSystem.toggle()
-                    }){
-                        Text(item.title).padding()
+          if !context.suggestions.isEmpty {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 0) {
+                    ForEach(context.suggestions, id: \.title) { item in
+                        Button(action:{
+                            keyboardContext.textDocumentProxy.insertText(item.title+" ")
+                            isSystem.toggle()
+                        }){
+                            Text(item.title).padding()
+                        }
                     }
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
+            .frame(maxHeight: 250)
+            }
         }
-        .frame(maxHeight: 250)
-        }
+        
+        
     }
 }
