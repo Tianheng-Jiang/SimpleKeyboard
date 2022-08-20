@@ -24,31 +24,33 @@ struct AutocompleteKeyboardView: View {
     ]
     
     var body: some View {
-    
-        VStack{
+        if context.suggestions.isEmpty {
             Button(action:{
                 isSystem.toggle()
             }){
-                Text("Back").padding()
+                Text("No suggestions").padding()
             }
-          if !context.suggestions.isEmpty {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 0) {
-                    ForEach(context.suggestions, id: \.title) { item in
-                        Button(action:{
-                            keyboardContext.textDocumentProxy.insertText(item.title+" ")
-                            isSystem.toggle()
-                        }){
-                            Text(item.title).padding()
-                        }
+        }else{
+            Button(action:{
+                isSystem.toggle()
+            }){
+            Image(systemName: "chevron.left.square.fill")
+            }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+               
+                ForEach(context.suggestions, id: \.title) { item in
+                    Button(action:{
+                        keyboardContext.textDocumentProxy.insertText(item.title+" ")
+                        isSystem.toggle()
+                    }){
+                        Text(item.title).padding()
                     }
                 }
-                .padding(.horizontal)
             }
-            .frame(maxHeight: 250)
-            }
+            .padding(.horizontal)
         }
-        
-        
+        .frame(maxHeight: 250)
+        }
     }
 }
