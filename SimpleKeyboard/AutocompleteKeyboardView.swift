@@ -37,7 +37,7 @@ struct AutocompleteKeyboardView: View {
             Image(systemName: "chevron.left.square.fill")
             }
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
+            LazyVGrid(columns: columns, spacing: 0) {
                
                 ForEach(context.suggestions, id: \.title) { item in
                     Button(action:{
