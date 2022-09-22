@@ -3,6 +3,7 @@
 //  SimpleKeyboard
 //
 //  Created by Peter on 26/05/22.
+//  Based on KeyboardKitDemo by Daniel Saidi on 2020-06-22.
 //
 
 import KeyboardKit

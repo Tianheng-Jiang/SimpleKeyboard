@@ -2,8 +2,8 @@
 //  DemoInputSetProvider.swift
 //  KeyboardUnicode
 //
-//  Created by Daniel Saidi on 2022-02-04.
-//  Copyright © 2022 Daniel Saidi. All rights reserved.
+//  Created by Peter on 26/05/22.
+//  Based on KeyboardKitDemo by Daniel Saidi on 2020-06-22.
 //
 
 import KeyboardKit
