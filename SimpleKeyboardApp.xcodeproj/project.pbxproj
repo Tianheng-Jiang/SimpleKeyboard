@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */; };
-		659F254F5C30F8B8B8564E43 /* DemoKeyboardLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */; };
-		659F284B89FD3066D9382EAA /* DemoKeyboardActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */; };
-		659F2A240A362C5392B7F8EE /* DemoKeyboardAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */; };
 		CECE6E1C28A261220030E858 /* ReadAndGetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE6E1B28A261220030E858 /* ReadAndGetList.swift */; };
 		CEDABB97289B40780076851A /* vocabulary-list.csv in Resources */ = {isa = PBXBuildFile; fileRef = CEDABB96289B40780076851A /* vocabulary-list.csv */; };
 		D0C0E31F2827D82F00795CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */; };
@@ -25,7 +22,6 @@
 		D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */; };
 		D0C0E3592827D87F00795CD0 /* SimpleKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D0CE809828BDB7900057AE78 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0CE809728BDB7900057AE78 /* KeyboardKit */; };
-		D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */; };
 		D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B0283A571C000C1D69 /* KeyboardView.swift */; };
 		D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */; };
 		D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */; };
@@ -71,9 +67,6 @@
 
 /* Begin PBXFileReference section */
 		659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAutocompleteProvider.swift; sourceTree = "<group>"; };
-		659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardAppearance.swift; sourceTree = "<group>"; };
-		659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardLayoutProvider.swift; sourceTree = "<group>"; };
-		659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardActionHandler.swift; sourceTree = "<group>"; };
 		CECE6E1B28A261220030E858 /* ReadAndGetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadAndGetList.swift; sourceTree = "<group>"; };
 		CEDABB96289B40780076851A /* vocabulary-list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "vocabulary-list.csv"; sourceTree = "<group>"; };
 		D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleKeyboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +85,6 @@
 		D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D0C0E3562827D87F00795CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonInputSetProvider.swift; sourceTree = "<group>"; };
 		D0D054B0283A571C000C1D69 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonAutocompleteToolbar.swift; sourceTree = "<group>"; };
 		D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteKeyboardView.swift; sourceTree = "<group>"; };
@@ -190,12 +182,8 @@
 			children = (
 				D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */,
 				D0D054B0283A571C000C1D69 /* KeyboardView.swift */,
-				D0D054AE283A558E000C1D69 /* DemonInputSetProvider.swift */,
 				D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */,
 				D0C0E3562827D87F00795CD0 /* Info.plist */,
-				659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */,
-				659F2B26ADC78BED1C74E8CB /* DemoKeyboardAppearance.swift */,
-				659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */,
 				CECE6E1B28A261220030E858 /* ReadAndGetList.swift */,
 				659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */,
 				D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */,
@@ -410,11 +398,7 @@
 			files = (
 				D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */,
 				D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */,
-				D0D054AF283A558E000C1D69 /* DemonInputSetProvider.swift in Sources */,
 				D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */,
-				659F284B89FD3066D9382EAA /* DemoKeyboardActionHandler.swift in Sources */,
-				659F2A240A362C5392B7F8EE /* DemoKeyboardAppearance.swift in Sources */,
-				659F254F5C30F8B8B8564E43 /* DemoKeyboardLayoutProvider.swift in Sources */,
 				659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */,
 				CECE6E1C28A261220030E858 /* ReadAndGetList.swift in Sources */,
 				D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */,

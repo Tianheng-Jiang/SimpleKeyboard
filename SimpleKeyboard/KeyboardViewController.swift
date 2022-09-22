@@ -31,20 +31,20 @@ class KeyboardViewController: KeyboardInputViewController {
 
 
         autocompleteProvider = FakeAutocompleteProvider()
-        // Setup a demo-specific keyboard appearance
-        // 💡 Play with this to change style of the keyboard
-        keyboardAppearance = DemoKeyboardAppearance(context: keyboardContext)
-
-        // Setup a demo-specific keyboard action handler
-        // 💡 Play with this to change the keyboard behavior
-        keyboardActionHandler = DemoKeyboardActionHandler(
-                inputViewController: self)
-
-        // Setup a demo-specific keyboard layout provider
-        // 💡 Play with this to change the keyboard's layout
-        keyboardLayoutProvider = DemoKeyboardLayoutProvider(
-                inputSetProvider: inputSetProvider,
-                dictationReplacement: nil)
+//        // Setup a demo-specific keyboard appearance
+//        // 💡 Play with this to change style of the keyboard
+//        keyboardAppearance = DemoKeyboardAppearance(context: keyboardContext)
+//
+//        // Setup a demo-specific keyboard action handler
+//        // 💡 Play with this to change the keyboard behavior
+//        keyboardActionHandler = DemoKeyboardActionHandler(
+//                inputViewController: self)
+//
+//        // Setup a demo-specific keyboard layout provider
+//        // 💡 Play with this to change the keyboard's layout
+//        keyboardLayoutProvider = DemoKeyboardLayoutProvider(
+//                inputSetProvider: inputSetProvider,
+//                dictationReplacement: nil)
         // Call super to perform the base initialization
         super.viewDidLoad()
     }

@@ -79,3 +79,13 @@ func makeFirstLetterDict() -> [Character: Int] {
     return firstLetterDict
 }
 
+// return lists of words
+func getWordsList() -> [String] {
+    let csvRows = getRows()
+    var wordsList: [String] = []
+    for rowLetter in 0...csvRows.count-2 {
+        let cString = csvRows[rowLetter][0]
+        wordsList.append(cString)
+    }
+    return wordsList
+}

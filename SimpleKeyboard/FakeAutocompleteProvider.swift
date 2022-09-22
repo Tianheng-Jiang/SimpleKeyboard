@@ -38,9 +38,6 @@ class FakeAutocompleteProvider: AutocompleteProvider {
         guard text.count > 0 else { return completion(.success([])) }
         completion(.success(suggestions(for: text)))
     }
-    
-
-    
 }
 
 

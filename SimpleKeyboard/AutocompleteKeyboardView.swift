@@ -30,6 +30,7 @@ struct AutocompleteKeyboardView: View {
                 isSystem.toggle()
             }){
                 Text("No suggestions").padding()
+                    .frame(minHeight: 250)
             }
         }else{
             Button(action:{
