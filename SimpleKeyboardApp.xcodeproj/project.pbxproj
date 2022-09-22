@@ -75,7 +75,7 @@
 		659F2B5A622987F32CE836D7 /* DemoKeyboardLayoutProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardLayoutProvider.swift; sourceTree = "<group>"; };
 		659F2F9C098B00C13018AF90 /* DemoKeyboardActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoKeyboardActionHandler.swift; sourceTree = "<group>"; };
 		CECE6E1B28A261220030E858 /* ReadAndGetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadAndGetList.swift; sourceTree = "<group>"; };
-		CEDABB96289B40780076851A /* vocabulary-list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "vocabulary-list.csv"; path = "../../../Downloads/vocabulary-list.csv"; sourceTree = "<group>"; };
+		CEDABB96289B40780076851A /* vocabulary-list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "vocabulary-list.csv"; sourceTree = "<group>"; };
 		D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleKeyboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
