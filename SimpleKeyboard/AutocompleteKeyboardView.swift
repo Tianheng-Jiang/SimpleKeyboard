@@ -18,9 +18,9 @@ struct AutocompleteKeyboardView: View {
     @EnvironmentObject private var keyboardContext: KeyboardContext
 
     let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.flexible(),spacing: 2),
+        GridItem(.flexible(),spacing: 2),
+        GridItem(.flexible(),spacing: 2)
     ]
     
     var body: some View {
@@ -36,19 +36,23 @@ struct AutocompleteKeyboardView: View {
             }){
             Image(systemName: "chevron.left.square.fill")
             }
+            
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 0) {
-               
-                ForEach(context.suggestions, id: \.title) { item in
-                    Button(action:{
-                        keyboardContext.textDocumentProxy.insertText(item.title+" ")
+            LazyVGrid(columns: columns, spacing: 2) {
+                ForEach(context.suggestions, id: \.title) { suggestion in
+                    Button(action: {
+                        keyboardContext.textDocumentProxy.insertText(suggestion.title+" ")
                         isSystem.toggle()
-                    }){
-                        Text(item.title).padding()
+                    }) {
+                        Text(suggestion.title)
+                            .frame(maxWidth: .infinity,maxHeight: .infinity)
+                            .padding()
+                            .background(Color(.systemGray6))
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
                     }
                 }
             }
-            .padding(.horizontal)
         }
         .frame(maxHeight: 250)
         }
