@@ -41,7 +41,7 @@ struct AutocompleteKeyboardView: View {
             LazyVGrid(columns: columns, spacing: 2) {
                 ForEach(context.suggestions, id: \.title) { suggestion in
                     Button(action: {
-                        keyboardContext.textDocumentProxy.insertText(suggestion.title+" ")
+                        keyboardContext.textDocumentProxy.insertAutocompleteSuggestion(suggestion)
                         isSystem.toggle()
                     }) {
                         Text(suggestion.title)
