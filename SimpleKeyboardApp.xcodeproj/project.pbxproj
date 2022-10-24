@@ -27,6 +27,7 @@
 		D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */; };
 		D0F7505D29067CB700906B70 /* db.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7505C29067CB700906B70 /* db.swift */; };
 		D0F7505F29067CF800906B70 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7505E29067CF800906B70 /* Phrase.swift */; };
+		D0F750622906801000906B70 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F750612906801000906B70 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D0F7505C29067CB700906B70 /* db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = db.swift; sourceTree = "<group>"; };
 		D0F7505E29067CF800906B70 /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 		D0F7506029067D1B00906B70 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D0F750612906801000906B70 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				CEDABB96289B40780076851A /* vocabulary-list.csv */,
 				D0F7505C29067CB700906B70 /* db.swift */,
 				D0F7505E29067CF800906B70 /* Phrase.swift */,
+				D0F750612906801000906B70 /* test.swift */,
 			);
 			path = SimpleKeyboard;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */,
 				D0F7505F29067CF800906B70 /* Phrase.swift in Sources */,
 				D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */,
+				D0F750622906801000906B70 /* test.swift in Sources */,
 				D0F7505D29067CB700906B70 /* db.swift in Sources */,
 				659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */,
 				CECE6E1C28A261220030E858 /* ReadAndGetList.swift in Sources */,
