@@ -55,7 +55,7 @@ private extension SimpleAutocompleteProvider {
     func suggestions(for text: String) -> [AutocompleteSuggestion] {
         let phrases = db.readStartWith(startText:text)
         // now we need to pull the closest 16 words [Actually, let's do all of them]
-
+        
         return phrases.map{suggestion($0.texts,$0.emoji)}
     }
     

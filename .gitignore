@@ -91,3 +91,6 @@ iOSInjectionProject/
 SimpleKeyboardApp.xcodeproj/project.xcworkspace/xcuserdata/peter.xcuserdatad/UserInterfaceState.xcuserstate
 SimpleKeyboardApp.xcodeproj/project.xcworkspace/xcuserdata/peter.xcuserdatad/UserInterfaceState.xcuserstate
 *.xcuserstate
+.DS_Store
+SimpleKeyboardApp/.DS_Store
+SimpleKeyboardApp/Assets.xcassets/.DS_Store

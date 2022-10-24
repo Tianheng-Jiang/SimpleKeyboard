@@ -33,13 +33,10 @@ class DBHelper{
     var db:OpaquePointer?
 
     func openDatabase() -> OpaquePointer? {
-        let persistentContainer = NSPersistentContainer(name: "db")
         let storeURL = URL.storeURL(for: "group.simpleapp.core.data", databaseName: "myDB")
-        let storeDescription = NSPersistentStoreDescription(url: storeURL)
-        persistentContainer.persistentStoreDescriptions = [storeDescription]
-        print("persistentStore description")
-        print(persistentContainer.persistentStoreDescriptions)
+        
         let fileURL = storeURL
+        
         // Open the database.
         var db: OpaquePointer? = nil
         if sqlite3_open(fileURL.path, &db) == SQLITE_OK {
