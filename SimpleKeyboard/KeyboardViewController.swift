@@ -1,24 +1,16 @@
 import KeyboardKit
 import SwiftUI
-
-/**
- This keyboard demonstrates how to create a keyboard that is
- using `SystemKeyboard` to mimic a native iOS keyboard.
- 
- The demo makes demo-specific configurations in `viewDidLoad`
- and registers a custom view in `viewWillSetupKeyboard`.
- 
- To use this keyboard, you must enable it in system settings
- ("Settings/General/Keyboards"). It needs full access to get
- access to features like haptic and audio feedback.
- 
- Note that this demo adds KeyboardKit as a local package and
- not a remote package, as you would normally do. It makes it
- possible to change things in the library directly from this
- project instead of having to push changes to GitHub.
- */
+//
+//  KeyboardViewController.swift
+//  SimpleKeyboard
+//
+//  Created by Peter on 8/05/22.
+//
 class KeyboardViewController: KeyboardInputViewController {
     
+
+    var db:DBHelper = DBHelper()
+
     /**
      In this demo, we will only configure KeyboardKit to use
      a demo-specific, unicode-based input set provider.
@@ -29,8 +21,19 @@ class KeyboardViewController: KeyboardInputViewController {
 //        // 💡 Play with this to change the keyboard's layout
 //        inputSetProvider = DemoInputSetProvider()
 
+        let rows = getRows()
 
-        autocompleteProvider = FakeAutocompleteProvider()
+        // loop through rows
+        for row in rows {
+            db.insert(texts: row[0], emoji: row[1])
+        }
+        
+//        // Inject a demo-specific unicode input set provider
+//        // 💡 Play with this to change the keyboard's layout
+//        inputSetProvider = DemoInputSetProvider()
+
+
+        autocompleteProvider = SimpleAutocompleteProvider()
 //        // Setup a demo-specific keyboard appearance
 //        // 💡 Play with this to change style of the keyboard
 //        keyboardAppearance = DemoKeyboardAppearance(context: keyboardContext)

@@ -14,7 +14,7 @@ import UIKit
  with "ly", "er" and "ter". It adds a subtitle to the middle
  suggestion as well, to show how subtitles can be used.
  */
-class FakeAutocompleteProvider: AutocompleteProvider {
+class SimpleAutocompleteProvider: AutocompleteProvider {
     
     var locale: Locale = .current
     
@@ -25,6 +25,7 @@ class FakeAutocompleteProvider: AutocompleteProvider {
     var learnedWords: [String] = []
     let firstLetterDict = makeFirstLetterDict()
     let rowsList = getRows()
+    let db:DBHelper = DBHelper()
     
     func hasIgnoredWord(_ word: String) -> Bool { false }
     func hasLearnedWord(_ word: String) -> Bool { false }
@@ -43,7 +44,7 @@ class FakeAutocompleteProvider: AutocompleteProvider {
 
 
 
-private extension FakeAutocompleteProvider {
+private extension SimpleAutocompleteProvider {
     
 
     // uhh This probably only needs to be called once but I'm bad so I dont know how LMAOOO
@@ -52,34 +53,10 @@ private extension FakeAutocompleteProvider {
 
 
     func suggestions(for text: String) -> [AutocompleteSuggestion] {
-        guard let cLetterPosition = firstLetterDict[text[0]] else { return [] }
-        
+        let phrases = db.readStartWith(startText:text)
         // now we need to pull the closest 16 words
-        return [
-            // Need to pull the closest (X) word from words list.
-            // So we need to...
-            // look at words list, find text.
-            // then take the next (16?) words from the words list.
-            // e.g, user inputs a
-            // locates the position that "a" would fill.
-            // just doing 5 rn for demo
-            suggestion(rowsList[cLetterPosition + 1][0]),
-            suggestion(rowsList[cLetterPosition + 2][0]),
-            suggestion(rowsList[cLetterPosition + 3][0]),
-            suggestion(rowsList[cLetterPosition + 4][0]),
-            suggestion(rowsList[cLetterPosition + 5][0]),
 
-            // keep in mind this goes from 0 to 25
-            suggestion(rowsList[cLetterPosition + 6][0]),
-            suggestion(rowsList[cLetterPosition + 7][0]),
-            suggestion(rowsList[cLetterPosition + 8][0]),
-            suggestion(rowsList[cLetterPosition + 9][0]),
-            suggestion(rowsList[cLetterPosition + 10][0]),
-            suggestion(rowsList[cLetterPosition + 11][0]),
-            suggestion(rowsList[cLetterPosition + 12][0]),
-            suggestion(rowsList[cLetterPosition + 13][0]),
-            suggestion(rowsList[cLetterPosition + 14][0]),
-        ]
+        return phrases.map{suggestion($0.texts,$0.emoji)}
     }
     
     func suggestion(_ word: String, _ subtitle: String? = nil) -> AutocompleteSuggestion {
