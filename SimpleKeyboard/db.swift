@@ -35,7 +35,7 @@ class DBHelper{
         }
     }
 
-    // create table for phrases with id, phrase, and emoji
+    // create table for phrases with id, phrase, and emoji, if not already exist
     func createTable() {
         let createTableString = "CREATE TABLE IF NOT EXISTS Phrases(Id INTEGER PRIMARY KEY,Texts TEXT,Emoji TEXT);"
         var createTableStatement: OpaquePointer? = nil
