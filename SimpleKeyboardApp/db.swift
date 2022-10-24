@@ -10,19 +10,36 @@ import Foundation
 import SQLite3
 import CoreData
 
+public extension URL {
+
+    /// Returns a URL for the given app group and database pointing to the sqlite database.
+    static func storeURL(for appGroup: String, databaseName: String) -> URL {
+        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup) else {
+            fatalError("Shared file container could not be created.")
+        }
+
+        return fileContainer.appendingPathComponent("\(databaseName).sqlite")
+    }
+}
+
 class DBHelper{
     
     init() {
         db = openDatabase()
+        createTable()
     }
 
     let dbPath: String = "myDB.sqlite"
     var db:OpaquePointer?
 
     func openDatabase() -> OpaquePointer? {
-        // The database file is in the application bundle.
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent(dbPath)
+        let persistentContainer = NSPersistentContainer(name: "db")
+        let storeURL = URL.storeURL(for: "group.simpleapp.core.data", databaseName: "myDB")
+        let storeDescription = NSPersistentStoreDescription(url: storeURL)
+        persistentContainer.persistentStoreDescriptions = [storeDescription]
+        print("persistentStore description")
+        print(persistentContainer.persistentStoreDescriptions)
+        let fileURL = storeURL
         // Open the database.
         var db: OpaquePointer? = nil
         if sqlite3_open(fileURL.path, &db) == SQLITE_OK {

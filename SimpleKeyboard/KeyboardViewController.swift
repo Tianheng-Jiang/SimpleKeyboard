@@ -1,5 +1,6 @@
 import KeyboardKit
 import SwiftUI
+import CoreData
 //
 //  KeyboardViewController.swift
 //  SimpleKeyboard
@@ -7,10 +8,6 @@ import SwiftUI
 //  Created by Peter on 8/05/22.
 //
 class KeyboardViewController: KeyboardInputViewController {
-    
-
-    var db:DBHelper = DBHelper()
-
     /**
      In this demo, we will only configure KeyboardKit to use
      a demo-specific, unicode-based input set provider.
@@ -21,12 +18,6 @@ class KeyboardViewController: KeyboardInputViewController {
 //        // 💡 Play with this to change the keyboard's layout
 //        inputSetProvider = DemoInputSetProvider()
 
-        let rows = getRows()
-
-        // loop through rows
-        for row in rows {
-            db.insert(texts: row[0], emoji: row[1])
-        }
         
 //        // Inject a demo-specific unicode input set provider
 //        // 💡 Play with this to change the keyboard's layout

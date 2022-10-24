@@ -8,7 +8,7 @@
 
 import KeyboardKit
 import SwiftUI
-
+import CoreData
 /**
  This demo-specific toolbar applies a fixed height, to avoid
  resizing when it gets suggestions and when it's empty.
@@ -27,6 +27,11 @@ struct AutocompleteKeyboardView: View {
     var body: some View {
         if context.suggestions.isEmpty {
             Button(action:{
+                let persistentContainer = NSPersistentContainer(name: "db")
+                print(persistentContainer.persistentStoreDescriptions)
+                
+                let fileURL = persistentContainer.persistentStoreDescriptions.first?.url
+                print(fileURL)
                 isSystem.toggle()
             }){
                 Text("No suggestions").padding()
@@ -34,6 +39,7 @@ struct AutocompleteKeyboardView: View {
             }
         }else{
             Button(action:{
+                
                 isSystem.toggle()
             }){
             Image(systemName: "chevron.left.square.fill")
