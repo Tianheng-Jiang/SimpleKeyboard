@@ -37,9 +37,11 @@ struct AutocompleteKeyboardView: View {
                 
                 isSystem.toggle()
             }){
-            Image(systemName: "chevron.left.square.fill")
-            }
-            
+            Image(systemName: "chevron.left")
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.mint)
+            }.background(Color.mint).cornerRadius(10)
         ScrollView {
             LazyVGrid(columns: columns, spacing: 2) {
                 ForEach(context.suggestions, id: \.title) { suggestion in
@@ -52,12 +54,12 @@ struct AutocompleteKeyboardView: View {
                             .padding()
                             .background(Color(.systemGray6))
                             .foregroundColor(.black)
-                            .cornerRadius(10)
                     }
                 }
             }
         }
         .frame(maxHeight: 250)
+        .frame(minHeight: 250)
         }
     }
 }
