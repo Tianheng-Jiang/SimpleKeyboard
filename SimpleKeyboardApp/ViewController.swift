@@ -41,6 +41,10 @@ class ViewController: UIViewController {
     @objc func refresh(_ sender: AnyObject) {
         phrases = db.read()
         tableView.reloadData()
+        // Dismiss the refresh control.
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
