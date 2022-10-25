@@ -12,6 +12,7 @@
 		D0175D36290752AE006E0B4F /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7506529068F9400906B70 /* Phrase.swift */; };
 		D0175D37290752CC006E0B4F /* ReadAndGetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06306712906A5870096FBA7 /* ReadAndGetList.swift */; };
 		D0175D38290752ED006E0B4F /* vocabulary-list.csv in Resources */ = {isa = PBXBuildFile; fileRef = D06306732906A5DB0096FBA7 /* vocabulary-list.csv */; };
+		D0175D3A29077563006E0B4F /* EditModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0175D3929077563006E0B4F /* EditModalViewController.swift */; };
 		D063066B290696750096FBA7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7506029067D1B00906B70 /* libsqlite3.tbd */; };
 		D063066F2906A1C80096FBA7 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D063066D2906A1C70096FBA7 /* db.xcdatamodeld */; };
 		D06306702906A1C80096FBA7 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D063066D2906A1C70096FBA7 /* db.xcdatamodeld */; };
@@ -78,6 +79,7 @@
 /* Begin PBXFileReference section */
 		659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAutocompleteProvider.swift; sourceTree = "<group>"; };
 		D0175D34290747A6006E0B4F /* SimpleKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleKeyboard.entitlements; sourceTree = "<group>"; };
+		D0175D3929077563006E0B4F /* EditModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalViewController.swift; sourceTree = "<group>"; };
 		D063066C290698370096FBA7 /* SimpleKeyboardApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleKeyboardApp.entitlements; sourceTree = "<group>"; };
 		D063066E2906A1C70096FBA7 /* db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db.xcdatamodel; sourceTree = "<group>"; };
 		D06306712906A5870096FBA7 /* ReadAndGetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadAndGetList.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				D0F7506329068F6C00906B70 /* db.swift */,
 				D0F7506529068F9400906B70 /* Phrase.swift */,
 				D06306712906A5870096FBA7 /* ReadAndGetList.swift */,
+				D0175D3929077563006E0B4F /* EditModalViewController.swift */,
 			);
 			path = SimpleKeyboardApp;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				D06306722906A5870096FBA7 /* ReadAndGetList.swift in Sources */,
 				D0C0E3232827D82F00795CD0 /* ViewController.swift in Sources */,
+				D0175D3A29077563006E0B4F /* EditModalViewController.swift in Sources */,
 				D0F7506629068F9400906B70 /* Phrase.swift in Sources */,
 				D0F7506429068F6C00906B70 /* db.swift in Sources */,
 				D0C0E31F2827D82F00795CD0 /* AppDelegate.swift in Sources */,

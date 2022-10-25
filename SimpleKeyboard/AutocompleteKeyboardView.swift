@@ -27,11 +27,6 @@ struct AutocompleteKeyboardView: View {
     var body: some View {
         if context.suggestions.isEmpty {
             Button(action:{
-                let persistentContainer = NSPersistentContainer(name: "db")
-                print(persistentContainer.persistentStoreDescriptions)
-                
-                let fileURL = persistentContainer.persistentStoreDescriptions.first?.url
-                print(fileURL)
                 isSystem.toggle()
             }){
                 Text("No suggestions").padding()
@@ -52,7 +47,7 @@ struct AutocompleteKeyboardView: View {
                         keyboardContext.textDocumentProxy.insertAutocompleteSuggestion(suggestion)
                         isSystem.toggle()
                     }) {
-                        Text(suggestion.title)
+                        Text(suggestion.title + "\n" + suggestion.subtitle!)
                             .frame(maxWidth: .infinity,maxHeight: .infinity)
                             .padding()
                             .background(Color(.systemGray6))

@@ -37,6 +37,7 @@ class SimpleAutocompleteProvider: AutocompleteProvider {
     
     func autocompleteSuggestions(for text: String, completion: AutocompleteCompletion) {
         guard text.count > 0 else { return completion(.success([])) }
+
         completion(.success(suggestions(for: text)))
     }
 }
@@ -53,7 +54,16 @@ private extension SimpleAutocompleteProvider {
 
 
     func suggestions(for text: String) -> [AutocompleteSuggestion] {
-        let phrases = db.readStartWith(startText:text)
+        var phrases = db.readStartWith(startText:text)
+        // print all phrases in the list
+        // number of phrases is less than 3 and greater than 0
+        if phrases.count < 3 && phrases.count > 0 {
+            let restPhrase =  phrases[0]
+            for _ in 0..<3-phrases.count {
+                phrases.append(restPhrase)
+            }
+        }
+        
         // now we need to pull the closest 16 words [Actually, let's do all of them]
         
         return phrases.map{suggestion($0.texts,$0.emoji)}

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var db:DBHelper = DBHelper()
     var phrases:[Phrase] = []
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,45 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+           refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+           tableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        phrases = db.read()
+        tableView.reloadData()
     }
 }
 
 
-extension ViewController: UITableViewDelegate{
+extension ViewController: UITableViewDelegate, EditModalViewControllerDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        db.deleteByID(id: phrases[indexPath.row].id)
+        openEditModal(indexPath: indexPath)
+    }
+
+    func didEditPhrase(phrase: Phrase, indexPath: IndexPath) {
+        db.updateByID(id: phrase.id, texts: phrase.texts, emoji: phrase.emoji)
+        phrases[indexPath.row] = phrase
+        tableView.reloadData()
+        dismiss(animated: true, completion: nil)
+    }
+
+    func didDeletePhrase(phrase: Phrase) {
+        db.deleteByID(id: phrase.id)
+        phrases = db.read()
+        tableView.reloadData()
+        dismiss(animated: true, completion: nil)
+    }
+
+    func openEditModal(indexPath: IndexPath){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "EditModal") as! EditModalViewController
+        vc.phrase = phrases[indexPath.row]
+        vc.indexPath = indexPath
+        vc.delegate = self
+        present(vc, animated: true)
     }
 }
 
