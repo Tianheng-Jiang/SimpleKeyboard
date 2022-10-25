@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */; };
+		D0175D35290752AE006E0B4F /* db.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7506329068F6C00906B70 /* db.swift */; };
+		D0175D36290752AE006E0B4F /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7506529068F9400906B70 /* Phrase.swift */; };
+		D0175D37290752CC006E0B4F /* ReadAndGetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06306712906A5870096FBA7 /* ReadAndGetList.swift */; };
+		D0175D38290752ED006E0B4F /* vocabulary-list.csv in Resources */ = {isa = PBXBuildFile; fileRef = D06306732906A5DB0096FBA7 /* vocabulary-list.csv */; };
+		D0175D3A29077563006E0B4F /* EditModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0175D3929077563006E0B4F /* EditModalViewController.swift */; };
+		D063066B290696750096FBA7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7506029067D1B00906B70 /* libsqlite3.tbd */; };
+		D063066F2906A1C80096FBA7 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D063066D2906A1C70096FBA7 /* db.xcdatamodeld */; };
+		D06306702906A1C80096FBA7 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D063066D2906A1C70096FBA7 /* db.xcdatamodeld */; };
+		D06306722906A5870096FBA7 /* ReadAndGetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06306712906A5870096FBA7 /* ReadAndGetList.swift */; };
+		D06306742906A5DB0096FBA7 /* vocabulary-list.csv in Resources */ = {isa = PBXBuildFile; fileRef = D06306732906A5DB0096FBA7 /* vocabulary-list.csv */; };
 		D0C0E31F2827D82F00795CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */; };
 		D0C0E3212827D82F00795CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */; };
 		D0C0E3232827D82F00795CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3222827D82F00795CD0 /* ViewController.swift */; };
@@ -18,6 +29,13 @@
 		D0C0E3422827D83500795CD0 /* SimpleKeyboardAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3412827D83500795CD0 /* SimpleKeyboardAppUITestsLaunchTests.swift */; };
 		D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */; };
 		D0C0E3592827D87F00795CD0 /* SimpleKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0CE809828BDB7900057AE78 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0CE809728BDB7900057AE78 /* KeyboardKit */; };
+		D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B0283A571C000C1D69 /* KeyboardView.swift */; };
+		D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */; };
+		D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */; };
+		D0F7506429068F6C00906B70 /* db.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7506329068F6C00906B70 /* db.swift */; };
+		D0F7506629068F9400906B70 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7506529068F9400906B70 /* Phrase.swift */; };
+		D0F7506729068FBC00906B70 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7506029067D1B00906B70 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +77,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAutocompleteProvider.swift; sourceTree = "<group>"; };
+		D0175D34290747A6006E0B4F /* SimpleKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleKeyboard.entitlements; sourceTree = "<group>"; };
+		D0175D3929077563006E0B4F /* EditModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalViewController.swift; sourceTree = "<group>"; };
+		D063066C290698370096FBA7 /* SimpleKeyboardApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleKeyboardApp.entitlements; sourceTree = "<group>"; };
+		D063066E2906A1C70096FBA7 /* db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db.xcdatamodel; sourceTree = "<group>"; };
+		D06306712906A5870096FBA7 /* ReadAndGetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadAndGetList.swift; sourceTree = "<group>"; };
+		D06306732906A5DB0096FBA7 /* vocabulary-list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "vocabulary-list.csv"; sourceTree = "<group>"; };
 		D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleKeyboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +100,12 @@
 		D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D0C0E3562827D87F00795CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D054B0283A571C000C1D69 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonAutocompleteToolbar.swift; sourceTree = "<group>"; };
+		D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteKeyboardView.swift; sourceTree = "<group>"; };
+		D0F7506029067D1B00906B70 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D0F7506329068F6C00906B70 /* db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = db.swift; sourceTree = "<group>"; };
+		D0F7506529068F9400906B70 /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F7506729068FBC00906B70 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D063066B290696750096FBA7 /* libsqlite3.tbd in Frameworks */,
+				D0CE809828BDB7900057AE78 /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,11 +146,13 @@
 		D0C0E3122827D82F00795CD0 = {
 			isa = PBXGroup;
 			children = (
+				D063066D2906A1C70096FBA7 /* db.xcdatamodeld */,
 				D0C0E31D2827D82F00795CD0 /* SimpleKeyboardApp */,
 				D0C0E3342827D83500795CD0 /* SimpleKeyboardAppTests */,
 				D0C0E33E2827D83500795CD0 /* SimpleKeyboardAppUITests */,
 				D0C0E3532827D87F00795CD0 /* SimpleKeyboard */,
 				D0C0E31C2827D82F00795CD0 /* Products */,
+				D0C0E3612828CE8700795CD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +170,8 @@
 		D0C0E31D2827D82F00795CD0 /* SimpleKeyboardApp */ = {
 			isa = PBXGroup;
 			children = (
+				D06306732906A5DB0096FBA7 /* vocabulary-list.csv */,
+				D063066C290698370096FBA7 /* SimpleKeyboardApp.entitlements */,
 				D0C0E31E2827D82F00795CD0 /* AppDelegate.swift */,
 				D0C0E3202827D82F00795CD0 /* SceneDelegate.swift */,
 				D0C0E3222827D82F00795CD0 /* ViewController.swift */,
@@ -141,6 +179,10 @@
 				D0C0E3272827D83500795CD0 /* Assets.xcassets */,
 				D0C0E3292827D83500795CD0 /* LaunchScreen.storyboard */,
 				D0C0E32C2827D83500795CD0 /* Info.plist */,
+				D0F7506329068F6C00906B70 /* db.swift */,
+				D0F7506529068F9400906B70 /* Phrase.swift */,
+				D06306712906A5870096FBA7 /* ReadAndGetList.swift */,
+				D0175D3929077563006E0B4F /* EditModalViewController.swift */,
 			);
 			path = SimpleKeyboardApp;
 			sourceTree = "<group>";
@@ -165,10 +207,23 @@
 		D0C0E3532827D87F00795CD0 /* SimpleKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D0175D34290747A6006E0B4F /* SimpleKeyboard.entitlements */,
+				D0D054B2283A57DA000C1D69 /* DemonAutocompleteToolbar.swift */,
+				D0D054B0283A571C000C1D69 /* KeyboardView.swift */,
 				D0C0E3542827D87F00795CD0 /* KeyboardViewController.swift */,
 				D0C0E3562827D87F00795CD0 /* Info.plist */,
+				659F22E8DA333527C4703BCE /* FakeAutocompleteProvider.swift */,
+				D0E5C38F283F6A3F008F897B /* AutocompleteKeyboardView.swift */,
 			);
 			path = SimpleKeyboard;
+			sourceTree = "<group>";
+		};
+		D0C0E3612828CE8700795CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7506029067D1B00906B70 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +244,8 @@
 				D0C0E3582827D87F00795CD0 /* PBXTargetDependency */,
 			);
 			name = SimpleKeyboardApp;
+			packageProductDependencies = (
+			);
 			productName = SimpleKeyboardApp;
 			productReference = D0C0E31B2827D82F00795CD0 /* SimpleKeyboardApp.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +299,9 @@
 			dependencies = (
 			);
 			name = SimpleKeyboard;
+			packageProductDependencies = (
+				D0CE809728BDB7900057AE78 /* KeyboardKit */,
+			);
 			productName = SimpleKeyboard;
 			productReference = D0C0E3522827D87E00795CD0 /* SimpleKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -281,6 +341,9 @@
 				Base,
 			);
 			mainGroup = D0C0E3122827D82F00795CD0;
+			packageReferences = (
+				D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			productRefGroup = D0C0E31C2827D82F00795CD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +363,7 @@
 			files = (
 				D0C0E32B2827D83500795CD0 /* LaunchScreen.storyboard in Resources */,
 				D0C0E3282827D83500795CD0 /* Assets.xcassets in Resources */,
+				D06306742906A5DB0096FBA7 /* vocabulary-list.csv in Resources */,
 				D0C0E3262827D82F00795CD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0175D38290752ED006E0B4F /* vocabulary-list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,9 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06306722906A5870096FBA7 /* ReadAndGetList.swift in Sources */,
 				D0C0E3232827D82F00795CD0 /* ViewController.swift in Sources */,
+				D0175D3A29077563006E0B4F /* EditModalViewController.swift in Sources */,
+				D0F7506629068F9400906B70 /* Phrase.swift in Sources */,
+				D0F7506429068F6C00906B70 /* db.swift in Sources */,
 				D0C0E31F2827D82F00795CD0 /* AppDelegate.swift in Sources */,
 				D0C0E3212827D82F00795CD0 /* SceneDelegate.swift in Sources */,
+				D063066F2906A1C80096FBA7 /* db.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +429,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0175D37290752CC006E0B4F /* ReadAndGetList.swift in Sources */,
+				D0175D35290752AE006E0B4F /* db.swift in Sources */,
+				D0175D36290752AE006E0B4F /* Phrase.swift in Sources */,
+				D0D054B1283A571C000C1D69 /* KeyboardView.swift in Sources */,
+				D0D054B3283A57DA000C1D69 /* DemonAutocompleteToolbar.swift in Sources */,
 				D0C0E3552827D87F00795CD0 /* KeyboardViewController.swift in Sources */,
+				659F2273541A97045A973D14 /* FakeAutocompleteProvider.swift in Sources */,
+				D0E5C390283F6A3F008F897B /* AutocompleteKeyboardView.swift in Sources */,
+				D06306702906A1C80096FBA7 /* db.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,9 +603,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleKeyboardApp/SimpleKeyboardApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q22D7D2L68;
+				DEVELOPMENT_TEAM = 3278JY74M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleKeyboardApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -554,9 +633,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleKeyboardApp/SimpleKeyboardApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q22D7D2L68;
+				DEVELOPMENT_TEAM = 3278JY74M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleKeyboardApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -676,9 +756,10 @@
 		D0C0E35B2827D87F00795CD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleKeyboard/SimpleKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q22D7D2L68;
+				DEVELOPMENT_TEAM = 3278JY74M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleKeyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SimpleKeyboard;
@@ -701,9 +782,10 @@
 		D0C0E35C2827D87F00795CD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleKeyboard/SimpleKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q22D7D2L68;
+				DEVELOPMENT_TEAM = 3278JY74M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleKeyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SimpleKeyboard;
@@ -772,6 +854,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GlockTian/KeyboardKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0CE809728BDB7900057AE78 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0C0E35E2828CE2600795CD0 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D063066D2906A1C70096FBA7 /* db.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D063066E2906A1C70096FBA7 /* db.xcdatamodel */,
+			);
+			currentVersion = D063066E2906A1C70096FBA7 /* db.xcdatamodel */;
+			path = db.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0C0E3132827D82F00795CD0 /* Project object */;
 }
